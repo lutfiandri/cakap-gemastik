@@ -10,12 +10,12 @@ const CATEGORIES = {
   kalender: "kalender",
   elektronik: "elektronik",
   waktu: "waktu",
-  kataKerja: "kata kerja",
-  kataPerintah: "kata_perintah",
-  kataBenda: "kata benda",
-  kataSambung: "kata sambung",
-  kataTanya: "kata tanya",
-  kataSifat: "kata sifat",
+  kata_kerja: "kata_kerja",
+  kata_perintah: "kata_perintah",
+  kata_benda: "kata_benda",
+  kata_sambung: "kata_sambung",
+  kata_tanya: "kata_tanya",
+  kata_sifat: "kata_sifat",
 };
 
 Object.freeze(CATEGORIES);

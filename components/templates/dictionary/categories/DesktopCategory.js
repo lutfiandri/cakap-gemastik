@@ -9,7 +9,7 @@ export function DesktopCategory({ categories, activeCategory }) {
         {Object.keys(categories).map((category) => (
           <BubbleButton
             key={category}
-            text={categories[category].split("_")}
+            text={categories[category].split("_").join(" ")}
             className="w-max"
             onClick={() =>
               router.push(
