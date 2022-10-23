@@ -47,7 +47,7 @@ export function Video({ src, label, labelInside = false, autoStart, onClick }) {
           )}
         />
         <RenderIf when={label && labelInside}>
-          <div className="absolute left-0 top-0 px-6 py-2 bg-gray-500 font-medium text-center capitalize bg-opacity-60 backdrop-blur-sm rounded-br-xl min-w-[40%]">
+          <div className="absolute left-0 top-0 px-6 py-2 bg-c-clips font-medium text-center capitalize bg-opacity-60 backdrop-blur-sm rounded-br-xl min-w-[40%]">
             <span className="text-white drop-shadow-md">{label}</span>
           </div>
         </RenderIf>

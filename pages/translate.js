@@ -13,42 +13,38 @@ function Translate() {
   const [focusVideo, setFocusVideo] = useState("");
 
   const handleTranslate = () => {
-    if (typeof window !== "undefined") {
-      const x = document.getElementById("translate");
-      x?.addEventListener("click", function handleChange() {
-        clearInterval(interval);
+    clearInterval(interval);
+    i = 0;
+    const tempTranslate = [];
+    const text = document.getElementById("text-translate");
+    const tempText = text.value.toLowerCase();
+    const array = tempText.split(" ");
+    array.forEach((word) => {
+      const obj = DICT_ITEMS.find((o) => o.label === word);
+      if (obj === undefined) {
+        const temp = word.split("");
+        temp.forEach((char) => tempTranslate?.push(char));
+      } else {
+        tempTranslate?.push(word);
+      }
+    });
+    setVideoTranslate(tempTranslate);
+    setFocusVideo(tempTranslate[0] ?? "");
+    interval = setInterval(() => {
+      i++;
+      if (i >= tempTranslate.length) {
         i = 0;
-        const tempTranslate = [];
-        const text = document.getElementById("text-translate");
-        const tempText = text.value.toLowerCase();
-        const array = tempText.split(" ");
-        array.forEach((word) => {
-          const obj = DICT_ITEMS.find((o) => o.label === word);
-          if (obj === undefined) {
-            const temp = word.split("");
-            temp.forEach((char) => tempTranslate?.push(char));
-          } else {
-            tempTranslate?.push(word);
-          }
-        });
-        setVideoTranslate(tempTranslate);
-        setFocusVideo(tempTranslate[0] ?? "");
-        interval = setInterval(() => {
-          i++;
-          if (i >= tempTranslate.length) {
-            i = 0;
-          }
-          setFocusVideo(tempTranslate[i] ?? "");
-        }, 2500);
-      });
-    }
+      }
+      setFocusVideo(tempTranslate[i] ?? "");
+    }, 2500);
   };
+
   return (
     <DefaultLayout title="Translate Bisindo - Cakap">
       <div className="flex flex-row justify-center justify-items-center place-items-center min-h-screen-no-header md:py-8 xl:my-0">
         <div className="flex flex-row justify-center justify-items-center place-items-center flex-wrap">
           {/* Translate box */}
-          <div className="flex flex-col self-start mx-4">
+          <div className="flex flex-col self-start mx-4 text-white drop-shadow-md">
             <div className="md:h-[50vh] h-[30vh] w-[75vw] lg:w-auto border-0 rounded-xl">
               <textarea
                 className="md:h-[50vh] h-[30vh] w-[75vw] lg:w-auto bg-grad-dana bg-opacity-50 border-0 rounded-xl p-6"
@@ -59,20 +55,15 @@ function Translate() {
                 placeholder="input text here..."
               ></textarea>
             </div>
-            {/* <button
-              type="submit"
-              id="translate"
-              className="w-full bg-grad-green rounded-2xl mt-3 h-12 text-lg font-semibold font-poppins text-white"
-              onClick={handleTranslate()}
-            >
-              translate
-            </button> */}
-            <BubbleButton
-              id="translate"
-              className="w-[100%] text-center rounded-2xl mt-3 h-12 text-lg font-semibold font-poppins text-white"
-              onClick={handleTranslate()}
-              text="Translate"
-            />
+
+            <div className="w-full">
+              <BubbleButton
+                id="translate"
+                className="!w-full text-center rounded-2xl mt-3 h-12 text-lg font-semibold font-poppins text-white"
+                onClick={handleTranslate}
+                text="Translate"
+              />
+            </div>
           </div>
           {/* video translate */}
           <div className="flex flex-col mx-5 w-[75vw] lg:w-[50vw] my-12 self-start">
