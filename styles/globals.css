@@ -30,6 +30,10 @@ body {
   max-height: calc(100vh - 76px);
 }
 
+.min-h-screen-no-header {
+  min-height: calc(100vh - 76px);
+}
+
 .top-header {
   top: 76px;
 }

@@ -44,7 +44,7 @@ function Translate() {
   };
   return (
     <DefaultLayout title="Translate Bisindo - Tutur">
-      <div className="flex flex-row justify-center justify-items-center place-items-center min-h-[100vh] md:my-16 xl:my-0">
+      <div className="flex flex-row justify-center justify-items-center place-items-center min-h-screen-no-header md:py-8 xl:my-0">
         <div className="flex flex-row justify-center justify-items-center place-items-center flex-wrap">
           {/* Translate box */}
           <div className="flex flex-col self-start mx-4">
@@ -68,7 +68,7 @@ function Translate() {
             </button>
           </div>
           {/* video translate */}
-          <div className="flex flex-col mx-5 w-[75vw] lg:w-[50vw] my-12 xl:my-0 self-start">
+          <div className="flex flex-col mx-5 w-[75vw] lg:w-[50vw] my-12 self-start">
             <div className="h-auto w-[75vw] lg:w-[50vw]  flex">
               {focusVideo !== "" ? (
                 <Video
