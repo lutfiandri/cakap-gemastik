@@ -44,7 +44,7 @@ function Translate() {
     }
   };
   return (
-    <DefaultLayout title="Translate Bisindo - Tutur">
+    <DefaultLayout title="Translate Bisindo - Cakap">
       <div className="flex flex-row justify-center justify-items-center place-items-center min-h-screen-no-header md:py-8 xl:my-0">
         <div className="flex flex-row justify-center justify-items-center place-items-center flex-wrap">
           {/* Translate box */}

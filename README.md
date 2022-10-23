@@ -1,5 +1,5 @@
 <h1 align="center">
-  Tutur
+  Cakap
 </h1>
 <p align="center">Help Communicate for Better Future</p>
 
@@ -11,7 +11,7 @@
 
 ## Description
 
-Tutur merupakan aplikasi kecerdasan buatan untuk translasi bahasa isyarat yang berbasis web. Kita dapat dengan mudah berkomunikasi dengan mereka hanya melalui kamera hp. Video yang terekam akan diproses untuk dapat mendeteksi gerakan bahasa isyarat dan ditranslasikan dalam bentuk teks ataupun suara. Untuk merespon ucapan isyarat mereka, kita juga dapat mentranslasikan teks menjadi bahasa isyarat sehingga komunikasi dengan mereka akan lebih mudah.
+Cakap merupakan aplikasi kecerdasan buatan untuk translasi bahasa isyarat yang berbasis web. Kita dapat dengan mudah berkomunikasi dengan mereka hanya melalui kamera hp. Video yang terekam akan diproses untuk dapat mendeteksi gerakan bahasa isyarat dan ditranslasikan dalam bentuk teks ataupun suara. Untuk merespon ucapan isyarat mereka, kita juga dapat mentranslasikan teks menjadi bahasa isyarat sehingga komunikasi dengan mereka akan lebih mudah.
 
 ## Design
 
@@ -47,7 +47,7 @@ contoh: feature/menambahkan-navbar <br/>
 - utils
   - helpers: pembantu
   - hooks: react hook
-- ml: machine learning development code 
+- ml: machine learning development code
 ```
 
 ## Clean Code

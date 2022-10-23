@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Guide } from "../templates/guide";
 import { Navbar } from "../templates/navbar";
 
-function DefaultLayout({ children, title = "Tutur" }) {
+function DefaultLayout({ children, title = "Cakap" }) {
   const [isGuideOpen, setIsGuideOpen] = useState(false);
   return (
     <>

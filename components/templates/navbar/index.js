@@ -39,13 +39,13 @@ export const Navbar = ({ setIsGuideOpen }) => {
             <div className="flex justify-items-center place-items-center content-center mr-2">
               <Image
                 src={"/android-chrome-192x192.png"}
-                alt="Tutur"
+                alt="Cakap"
                 width={40}
                 height={40}
               />
             </div>
             <span className="self-center whitespace-nowrap text-2xl text-c-clips font-bold">
-              Tutur
+              Cakap
             </span>
           </a>
         </Link>

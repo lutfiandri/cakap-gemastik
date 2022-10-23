@@ -47,7 +47,7 @@ function Dictionary() {
   const [isCategoryMenuOpened, setIsCategoryMenuOpened] = useState(false);
 
   return (
-    <DefaultLayout title="Kamus Bisindo - Tutur">
+    <DefaultLayout title="Kamus Bisindo - Cakap">
       <div className="flex w-full relative">
         {/* category list */}
         <RenderIf when={!isMdOrMore}>
