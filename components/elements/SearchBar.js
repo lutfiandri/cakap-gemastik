@@ -8,7 +8,7 @@ export function SearchBar({
   placeholder = "cari...",
 }) {
   return (
-    <div className="group w-full md:w-[300px] flex items-center rounded-full border border-gray-300 shadow-sm  focus:border-indigo-300 px-4 text-c-05 bg-white">
+    <div className="group w-full md:w-[300px] flex items-center rounded-full border border-gray-300 shadow-sm  focus:border-indigo-300 px-4 text-c-clips bg-white">
       <HiSearch className="w-6 h-6 " />
       <input
         type="text"

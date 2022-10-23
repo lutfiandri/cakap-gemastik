@@ -18,20 +18,32 @@ body {
   background: linear-gradient(270deg, #129aa3 0%, #1bd5e1 100%);
 }
 
+.bg-grad-blue {
+  background: linear-gradient(300deg, #8860d0 0%, #84ceeb 100%);
+}
+
+.bg-grad-dana {
+  background: linear-gradient(119.08deg, #84ceeb 35.1%, #5ab8eb 77.35%);
+}
+
 .hover-bubble {
   @apply hover:-translate-y-[2px] hover:scale-105 duration-200;
 }
 
 .h-screen-no-header {
-  height: calc(100vh - 68px);
+  height: calc(100vh - 76px);
 }
 
 .max-h-screen-no-header {
-  max-height: calc(100vh - 68px);
+  max-height: calc(100vh - 76px);
+}
+
+.min-h-screen-no-header {
+  min-height: calc(100vh - 76px);
 }
 
 .top-header {
-  top: 56px;
+  top: 76px;
 }
 
 /* width */

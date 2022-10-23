@@ -4,6 +4,7 @@ import DefaultLayout from "/components/layouts/DefaultLayout";
 import { BackgroundDecoration } from "/components/elements/decoration/BackgroundDecoration";
 import { DICT_ITEMS } from "/utils/constants";
 import Image from "next/image";
+import { BubbleButton } from "/components/elements/button";
 
 function Translate() {
   let i = 0;
@@ -44,13 +45,13 @@ function Translate() {
   };
   return (
     <DefaultLayout title="Translate Bisindo - Tutur">
-      <div className="flex flex-row justify-center justify-items-center place-items-center min-h-[100vh] md:my-16 xl:my-0">
+      <div className="flex flex-row justify-center justify-items-center place-items-center min-h-screen-no-header md:py-8 xl:my-0">
         <div className="flex flex-row justify-center justify-items-center place-items-center flex-wrap">
           {/* Translate box */}
           <div className="flex flex-col self-start mx-4">
             <div className="md:h-[50vh] h-[30vh] w-[75vw] lg:w-auto border-0 rounded-xl">
               <textarea
-                className="md:h-[50vh] h-[30vh] w-[75vw] lg:w-auto bg-c-05 bg-opacity-50 border-0 rounded-xl p-6"
+                className="md:h-[50vh] h-[30vh] w-[75vw] lg:w-auto bg-grad-dana bg-opacity-50 border-0 rounded-xl p-6"
                 rows="4"
                 cols="50"
                 id="text-translate"
@@ -58,17 +59,23 @@ function Translate() {
                 placeholder="input text here..."
               ></textarea>
             </div>
-            <button
+            {/* <button
               type="submit"
               id="translate"
               className="w-full bg-grad-green rounded-2xl mt-3 h-12 text-lg font-semibold font-poppins text-white"
               onClick={handleTranslate()}
             >
               translate
-            </button>
+            </button> */}
+            <BubbleButton
+              id="translate"
+              className="w-[100%] text-center rounded-2xl mt-3 h-12 text-lg font-semibold font-poppins text-white"
+              onClick={handleTranslate()}
+              text="Translate"
+            />
           </div>
           {/* video translate */}
-          <div className="flex flex-col mx-5 w-[75vw] lg:w-[50vw] my-12 xl:my-0 self-start">
+          <div className="flex flex-col mx-5 w-[75vw] lg:w-[50vw] my-12 self-start">
             <div className="h-auto w-[75vw] lg:w-[50vw]  flex">
               {focusVideo !== "" ? (
                 <Video
@@ -80,7 +87,7 @@ function Translate() {
                   Id="OneVideo"
                 />
               ) : (
-                <div className="flex relative isolate overflow-hidden shadow-xl rounded-xl w-[75vw] lg:w-[50vw] bg-c-01 md:h-[50vh] h-[30vh] justify-center ">
+                <div className="flex relative isolate overflow-hidden shadow-xl rounded-xl w-[75vw] lg:w-[50vw] bg-c-clips md:h-[50vh] h-[30vh] justify-center ">
                   <div className="flex justify-items-center place-items-center content-center">
                     <Image
                       src="/icon/playVideo.svg"

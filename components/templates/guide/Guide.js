@@ -94,7 +94,7 @@ export function Guide({ isOpen, setIsOpen }) {
 
             {/* close button */}
             <div role="button" onClick={() => setIsOpen(false)}>
-              <div className="absolute top-0 right-0 p-3 bg-grad-green rounded-full translate-x-[20%] -translate-y-[20%]">
+              <div className="absolute top-0 right-0 p-3 bg-grad-dana rounded-full translate-x-[20%] -translate-y-[20%]">
                 <HiX className="h-6 w-6 text-white" />
               </div>
             </div>
