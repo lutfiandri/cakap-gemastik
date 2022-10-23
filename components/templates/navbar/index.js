@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const routes = [
   {
@@ -25,8 +26,10 @@ const routes = [
   },
 ];
 
-export const Navbar = () => {
+export const Navbar = ({ setIsGuideOpen }) => {
   const [dropDown, setDropDown] = useState(false);
+  const router = useRouter();
+
   return (
     <nav className="bg-white px-2 sm:px-4 rounded border-b-4 py-4 border-c-05">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
@@ -72,25 +75,30 @@ export const Navbar = () => {
           >
             {routes.map((route) => {
               return (
-                <Link
-                  href={route.path}
-                  class="md:p-4 py-2 block"
+                <div
+                  className="mx-5 flex"
                   key={route.key}
+                  role="button"
+                  onClick={() => {
+                    if (route.key === "guide") {
+                      setIsGuideOpen((g) => !g);
+                    } else {
+                      router.push(route.path);
+                    }
+                  }}
                 >
-                  <a className="mx-5 flex">
-                    <div className="flex justify-items-center place-items-center content-center mr-1">
-                      <Image
-                        src={`/icon/${route.name}.svg`}
-                        height={20}
-                        width={20}
-                        alt={route.name}
-                      />
-                    </div>
-                    <span className="self-center font-poppins whitespace-nowrap text-lg text-c-05 font-semibold">
-                      {route.name}
-                    </span>
-                  </a>
-                </Link>
+                  <div className="flex justify-items-center place-items-center content-center mr-1">
+                    <Image
+                      src={`/icon/${route.name}.svg`}
+                      height={20}
+                      width={20}
+                      alt={route.name}
+                    />
+                  </div>
+                  <span className="self-center font-poppins whitespace-nowrap text-lg text-c-05 font-semibold">
+                    {route.name}
+                  </span>
+                </div>
               );
             })}
           </ul>
