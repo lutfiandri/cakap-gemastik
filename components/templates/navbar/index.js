@@ -31,7 +31,8 @@ export const Navbar = ({ setIsGuideOpen }) => {
   const router = useRouter();
 
   return (
-    <nav className="bg-white px-2 sm:px-4 rounded border-b-4 py-4 border-c-05">
+    // FIXME: navbar z-index on index.js
+    <nav className="bg-white px-2 sm:px-4 rounded border-b-4 py-4 border-c-clips z-[99999]">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <Link href="/" className="flex items-center">
           <a className="flex">
@@ -43,7 +44,7 @@ export const Navbar = ({ setIsGuideOpen }) => {
                 height={40}
               />
             </div>
-            <span className="self-center whitespace-nowrap text-2xl text-c-05 font-bold">
+            <span className="self-center whitespace-nowrap text-2xl text-c-clips font-bold">
               Tutur
             </span>
           </a>
@@ -95,7 +96,7 @@ export const Navbar = ({ setIsGuideOpen }) => {
                       alt={route.name}
                     />
                   </div>
-                  <span className="self-center font-poppins whitespace-nowrap text-lg text-c-05 font-semibold">
+                  <span className="self-center font-poppins whitespace-nowrap text-lg text-c-clips font-semibold">
                     {route.name}
                   </span>
                 </div>

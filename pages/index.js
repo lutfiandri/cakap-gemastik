@@ -208,12 +208,12 @@ function HomeManual() {
             />
           </div>
 
-          <div className="px-4 py-4 w-full bg-grad-orange rounded-lg text-white font-medium text-xl border-2 border-opacity-40 border-white lg:border-none capitalize tracking-wide">
+          <div className="px-4 py-4 w-full bg-grad-dana rounded-lg text-white font-medium text-xl border-2 border-opacity-40 border-white lg:border-none capitalize tracking-wide">
             {predictions.length === 0 ? "-" : predictions.join("  ")}
           </div>
           <BubbleButton text="Reset" onClick={() => setPredictions([])} />
         </div>
-        <div className="w-screen h-screen-no-header fixed left-0 top-header lg:static lg:w-full lg:h-full lg:rounded-lg overflow-hidden bg-cyan-300 max-h-screen-no-header">
+        <div className="w-screen h-screen-no-header fixed left-0 top-header lg:static lg:w-full lg:h-full lg:rounded-lg overflow-hidden bg-c-dana max-h-screen-no-header">
           {/* pppp */}
           <Webcam
             ref={videoRef}
